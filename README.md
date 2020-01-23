@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animacija</title>
+    <style>
+        body {
+            background-color: #050210;
+        }
+
+        .krug1 {
+
+
+            position: absolute;
+            display: relative;
+            margin: auto;
+            left: 651px;
+            top: 200px;
+            width: 220px;
+            height: 220px;
+            background-color: black;
+            border-radius: 100%;
+
+        }
+
+
+        .krug2 {
+
+            position: absolute;
+            margin: auto;
+            left: 650px;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 100%;
+            background-color: #050210;
+            background: #050210;
+            transform: scale(1);
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            filter: brightness(1.5);
+
+
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(0.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+
+        .krug {
+
+            position: absolute;
+            margin: auto;
+            left: 633px;
+            top: 182px;
+            width: 254px;
+            height: 254px;
+            border-radius: 100%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            filter: drop-shadow(-1px -3px 19px white);
+            animation-name: my-animation;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+        }
+
+        @keyframes my-animation {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateX(0px) rotate(90deg);
+
+            }
+
+            66% {
+                transform: translatex(0px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateX(0px) rotate(360deg);
+            }
+
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="krug"></div>
+
+    <div class="krug1"></div>
+    <div class="krug2"></div>
+</body>
+
+</html>
